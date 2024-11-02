@@ -1,6 +1,12 @@
 async function userLogout(req,res){
     try{
-        res.clearCookie("token")
+    
+        res.cookie("token", null, {
+            expires: new Date(Date.now()),
+             sameSite:"None",
+             secure: true
+          });
+         
 
         res.json({
             message : "Logged out successfully",
