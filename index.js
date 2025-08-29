@@ -6,7 +6,7 @@ const connectDB = require("./config/db");
 const router = require("./routes");
 
 const app = express();
-// console.log(process.env.FRONTEND_URL)
+console.log(process.env.FRONTEND_URL)
 app.use(
   cors({
     origin: process.env.FRONTEND_URL,
